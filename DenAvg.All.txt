@@ -1,0 +1,4 @@
+"centrostephanus.rodgersi"	"colobocentrotus.atratus"	"diadema.pauicispinum"	"diadema.setosum"	"echinometra.mathaei"	"echinometra.oblonga"	"echinotrix.calamaris"	"heliocidaris.erythrogramma"	"heterocentrotus.mammillatus"	"heterocentrotus.trigonarius"	"prionocidaris.baculosa"	"salmacis.belli"	"stomopneustes.variolaris"	"toxopneustes.pileolus"	"tripneustes.gratilla"
+"AvgDen.Low"	0	0.495555555555556	0.382222222222222	0.306666666666667	1.10888888888889	0.642222222222222	0.733333333333333	0.00888888888888889	0.384444444444444	0.42	0.411111111111111	0.253333333333333	0.568888888888889	0.895555555555556	0.0777777777777778
+"AvgDen.Mod"	0	0.2925	0.0825	0.1625	1.8225	1.13	0.2975	0	2.145	1.1825	1.3825	1.53	0.465	1.905	0.96
+"AvgDen.High"	0.3025	0.0625	0	0.02	1.32	0.9	0.1075	0	1.965	1.17	1.9925	2.175	0.0275	2.9175	2.82

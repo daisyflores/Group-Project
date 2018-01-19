@@ -1,0 +1,4 @@
+"centrostephanus.rodgersi"	"diadema.pauicispinum"	"echinometra.oblonga"	"heliocidaris.erythrogramma"	"heterocentrotus.mammillatus"	"heterocentrotus.trigonarius"	"stomopneustes.variolaris"
+"Cluster1.Low"	0	0.382222222222222	0.642222222222222	0.00888888888888889	0.384444444444444	0.42	0.568888888888889
+"Cluster1.Mod"	0	0.0825	1.13	0	2.145	1.1825	0.465
+"Cluster1.High"	0.3025	0	0.9	0	1.965	1.17	0.0275

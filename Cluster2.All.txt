@@ -1,0 +1,4 @@
+"colobocentrotus.atratus"	"diadema.setosum"	"echinometra.mathaei"	"echinotrix.calamaris"	"prionocidaris.baculosa"	"salmacis.belli"	"toxopneustes.pileolus"	"tripneustes.gratilla"
+"Cluster2.Low"	0.495555555555556	0.306666666666667	1.10888888888889	0.733333333333333	0.411111111111111	0.253333333333333	0.895555555555556	0.0777777777777778
+"Cluster2.Mod"	0.2925	0.1625	1.8225	0.2975	1.3825	1.53	1.905	0.96
+"Cluster2.High"	0.0625	0.02	1.32	0.1075	1.9925	2.175	2.9175	2.82
