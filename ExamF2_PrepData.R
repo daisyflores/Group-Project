@@ -2,9 +2,9 @@ working_directory <-'/Users/Daisy/Desktop/MultivariateStats/multivar'
 ##Species Data####
 
 #biomass data from Part D RDA
-biomass <-(read.delim(file = paste0(working_directory, '//Exam.biomass.wide.txt'), 
-                      h=T, sep ="\t"))
-biomass <- data.frame(biomass[,-1], row.names = biomass[,1])
+biomass <- read.delim(file = paste0(working_directory, '//data2_species.txt'), 
+                      h=T, sep ="\t", row.names = 1)
+biomass<-cast(biomass,siteID~species,sum)
 abundance <-as.matrix(biomass)
 #Species clusters from F.Part1####
 clusters <-read.delim(file = paste0(working_directory, '//Examclusters.txt'), 
@@ -13,7 +13,7 @@ clusters<- as.data.frame(t(clusters))
 clusters<- clusters[-8]
 
 ##From "1.Exam F_Computing FDiv"
-newdat <-read.delim(file = paste0(working_directory, '//Exam.SpeciesCoordinates.txt'), 
+newdat <-read.delim(file = paste0(working_directory, '/Exam.SpeciesCoordinates.txt'), 
                     h=T, sep ="\t", row.names = 1)
 
 #Temperature Data into 3 discrete categories####
@@ -37,7 +37,9 @@ LowTemp <- Temp[Temp$category == "low", ]
 #subset of species at sites with low Temperature (abundance = biomass.wide)
 Species.Low<-as.data.frame(abundance[rownames(LowTemp),])
 Species.Low["colsum",] <- colSums(Species.Low)
-Species.Low["avg.den",] <- Species.Low["colsum",]/(50*length(LowTemp$category))
+Species.Low["avg.den",] <- Species.Low["colsum",]/
+  ((50*6)*(length(LowTemp$category)))
+#50m2 per transect, 6 transects per site, #number of sites == individuals per m^2
 AvgDen.Low<- Species.Low["avg.den",]
 
 #Cluster 1 @Low Temp
@@ -56,7 +58,8 @@ ModTemp <- Temp[Temp$category == "moderate", ]
 #subset of species at sites with Mod Temperature (abundance = biomass.wide)
 Species.Mod<-as.data.frame(abundance[rownames(ModTemp),])
 Species.Mod["colsum",] <- colSums(Species.Mod)
-Species.Mod["avg.den",] <- Species.Mod["colsum",]/(50*length(ModTemp$category))
+Species.Mod["avg.den",] <- Species.Mod["colsum",]/
+  ((50*6)*(length(ModTemp$category)))
 AvgDen.Mod<- Species.Mod["avg.den",]
 
 #Cluster 1 @Mod Temp
@@ -76,7 +79,8 @@ HighTemp <- Temp[Temp$category == "high", ]
 #subset of species at sites with High Temperature (abundance = biomass.wide)
 Species.High<-as.data.frame(abundance[rownames(HighTemp),])
 Species.High["colsum",] <- colSums(Species.High)
-Species.High["avg.den",] <- Species.High["colsum",]/(50*length(HighTemp$category))
+Species.High["avg.den",] <- Species.High["colsum",]/
+  ((50*6)*(length(HighTemp$category)))
 AvgDen.High<- Species.High["avg.den",]
 
 #Cluster 1 @High Temp

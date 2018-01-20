@@ -73,7 +73,7 @@ plotLow<-ggplot(data=newdat,(aes(x=A1,y=A2)))+
   theme(panel.grid.minor=element_blank(), panel.grid.major=element_blank(),
         title = element_text(vjust=1))+
   labs(title= "LOW",x = "PC 1", y = "PC 2")
-plotLow
+plotLow #Plot Low####
 
 
 #Moderate Temperature####
@@ -126,7 +126,7 @@ plotmod<-ggplot(data=newdat,(aes(x=A1,y=A2)))+
   theme(panel.grid.minor=element_blank(), panel.grid.major=element_blank(),
         title = element_text(vjust=1))+
   labs(title= "MOD",x = "PC 1", y = "PC 2")
-plotmod
+plotmod #Plot mod####
 
 #High Temperature####
 sp_high<-which(Density["AvgDen.High",]!=0)
@@ -177,7 +177,7 @@ plothigh<-ggplot(data=newdat,(aes(x=A1,y=A2)))+
   theme(panel.grid.minor=element_blank(), panel.grid.major=element_blank(),
         title = element_text(vjust=1))+
   labs(title= "HIGH",x = "PC 1", y = "PC 2")
-plothigh
+plothigh #plot high####
 dev.off()
 quartz()
 par(mfrow= c(1,3))
